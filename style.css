@@ -106,7 +106,18 @@
 
 
 
+#shannon_content img {
+    height: 30%;
+    width: 30%;
+    padding: 1%;
+    transition: 0.3s;
+}
 
+#shannon_content img:hover {
+    border: 5px solid #67c7ff;
+    height: 31%;
+    width: 31%
+}
 
 
 
