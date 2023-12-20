@@ -1,0 +1,141 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    align-self: flex-start;
+    z-index: 1;
+    padding: 0;
+}
+
+
+.title {
+    position: fixed;
+    top: 40px;
+    left: 40px;
+    padding-top: 30px;
+    width: 200px;
+    font-size: medium;
+    font-weight: 100;
+    z-index: 2;
+    color: azure;
+}
+
+#name, #profession {
+    position: relative;
+    z-index: 5;
+    color: azure;
+}
+
+#mypic {
+    border: 5px solid #67c7ff;
+    margin: auto;
+    border-radius: 50%;
+    transform: translateY(-0%);
+    transition: 1s;
+}
+
+#mypic:hover {
+    border: 5px solid rgb(170, 227, 255);
+}
+
+.about_me {
+    padding-block: 30px;
+    text-align: center;
+}
+
+.social-platforms img {
+    padding-left: 5px;
+    position: relative;
+    max-width: 20px;
+    height: auto;
+    transform: translateX(280%);
+}
+
+
+.left_content {
+    width: 50%;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.right_content {
+    width: 50%;
+    padding-left: 15%;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin:0 auto;
+}
+
+
+
+.categories {
+    display: flex;
+    align-content: center;
+    padding-left: 5px;
+    max-width: fit-content;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+
+}
+
+.categories h4 {
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.categories h4:hover {
+    color: rgb(33, 159, 208);
+    cursor:pointer;
+}
+
+
+
+
+
+
+
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    text-align: center;
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+
+
+/* fonts */
+
+body {
+    font-family: 'Manrope', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Manrope', sans-serif;
+}
+
+p {
+    font-family: 'Manrope', sans-serif;
+}
