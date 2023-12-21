@@ -59,9 +59,16 @@
 .social-platforms img {
     padding-left: 5px;
     position: relative;
-    max-width: 20px;
+    width: 20px;
     height: auto;
     transform: translateX(280%);
+    transition: 0.3s;
+}
+
+.social-platforms img:hover {
+    background-color: rgba(202, 234, 255, 0.7);
+    border-radius: 100px;
+    translate: translateX(19px);
 }
 
 
@@ -104,29 +111,28 @@
     cursor:pointer;
 }
 
-
-
-#balljmp_content img {
+#game_apps img {
     height: 70%;
     width: 70%;
     padding: 1%;
     transition: 0.3s;
 }
 
-#balljmp_content img:hover {
+#game_apps img:hover {
     border: 5px solid #67c7ff;
     height: 70.2%;
     width: 70.2%
 }
 
-#proj_content img {
+
+#proj_content img:not(#game_apps img) {
     height: 30%;
     width: 30%;
     padding: 1%;
     transition: 0.3s;
 }
 
-#proj_content img:hover {
+#proj_content img:not(#game_apps img):hover {
     border: 5px solid #67c7ff;
     height: 30.2%;
     width: 30.2%

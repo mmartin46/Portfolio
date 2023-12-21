@@ -32,6 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
             // Start by setting the default section to the about me section.
             if (contentDiv) {
                 contentDiv.style.display = "none";
+                contentDiv.style.opacity = "0";
+                contentDiv.style.transition = "opacity 0.6s ease-in-out, display 0s ease-in-out";
             }
         });
     }
@@ -61,6 +63,7 @@ document.addEventListener("DOMContentLoaded", function () {
             let currContentDiv = document.getElementById(section + "_content");
             if (currContentDiv) {
                 currContentDiv.style.display = "none";
+                currContentDiv.style.opacity = "0";
             }
 
             contentDiv.style.display = "block";
@@ -68,6 +71,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
 
         contentDiv.style.display = "block";
+        contentDiv.style.opacity = "1";
         contentDiv.classList.add("active");
     }
 });
