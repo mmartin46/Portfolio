@@ -1,18 +1,40 @@
+/* global document */
+/* jslint browser */
 // script.js
 
-let allSections = {
-    meSection: "me",
-    projSection: "proj",
-    skillSection: "skills",
-    workSection: "work"
-};
 
-Object.values(allSections).forEach(sectionId => {
-    let sectionElement = document.getElementById(sectionId);
+document.addEventListener("DOMContentLoaded", function () {
+    "use strict";
 
-    if (sectionElement) {
-        sectionElement.addEventListener("click", function() {
-            // FIXME: add a specific part based on the button clicked
+    const allSections = {
+        meSection: "me",
+        projSection: "proj",
+        skillSection: "skills",
+        workSection: "work"
+    };
+
+    Object.values(allSections).forEach(function (sectionId) {
+        let sectionElement = document.getElementById(sectionId);
+
+        if (sectionElement) {
+            sectionElement.addEventListener("click", function() {
+                whichSection(sectionId);
+            });
+        }
+    });
+    function whichSection(clickedSection) {
+        let contentDivString = clickedSection + "_content";
+        let contentDiv = document.getElementById(contentDivString);
+
+        Object.values(allSections).forEach(function (sectionId) {
+            console.log(sectionId + '_content');
+            if (contentDiv) {
+                handleMatch(contentDiv, sectionId, clickedSection);
+            }
         });
+    }
+
+    function handleMatch(contentDiv, sectionId, clickedSection) {
+        contentDiv.style.display = sectionId === clickedSection ? "block" : "none";
     }
 });
