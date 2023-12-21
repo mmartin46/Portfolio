@@ -22,9 +22,25 @@ document.addEventListener("DOMContentLoaded", function () {
             });
         }
     });
+
+    Object.values(allSections).forEach(function (sectionId, index) {
+        let contentDivString = sectionId + "_content";
+        let contentDiv = document.getElementById(contentDivString);
+
+        // Start by setting the default section to the about me section.
+        if (contentDiv) {
+            contentDiv.style.display = index === 0 ? "block" : "none";
+        }
+    });
+
     function whichSection(clickedSection) {
         let contentDivString = clickedSection + "_content";
         let contentDiv = document.getElementById(contentDivString);
+
+        // If the section has already been clicked
+        if (contentDiv.style.display === "block") {
+            return;
+        }
 
         Object.values(allSections).forEach(function (sectionId) {
             console.log(sectionId + '_content');
