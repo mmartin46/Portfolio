@@ -50,14 +50,13 @@ document.addEventListener("DOMContentLoaded", function () {
         Object.values(allSections).forEach(function (sectionId) {
             if (contentDiv) {
                 if (sectionId === clickedSection) {
-                    console.log(sectionId + "_content");
-                    handleMatch(contentDiv, sectionId, clickedSection);
+                    handleMatch(contentDiv);
                 }
             }
         });
     }
 
-    function handleMatch(contentDiv, sectionId, clickedSection) {
+    function handleMatch(contentDiv) {
         Object.values(allSections).forEach(function (section) {
             let currContentDiv = document.getElementById(section + "_content");
             if (currContentDiv) {
