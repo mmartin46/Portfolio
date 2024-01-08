@@ -6,6 +6,8 @@
 document.addEventListener("DOMContentLoaded", function () {
     "use strict";
 
+    // FIXME: Implement some weather API
+
     const allSections = {
         meSection: "me",
         projSection: "proj",
